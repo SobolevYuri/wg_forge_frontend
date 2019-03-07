@@ -3,16 +3,16 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>WG Forge - Sobolev</title>
+    <title>WG Forge - Tretyakov</title>
 </head>
 
 <body>
     <div id="app">
         <table>
             <thead>
-                <tr>
+                <tr class="search-section">
                     <th>Search:</th>
-                    <th colspan="2"><input type="text" id="search" placeholder="Tap order(s) info"></th>
+                    <th><input type="text" id="search" placeholder="Tap order(s) info to find"></th>
                 </tr>
                 <tr>
                     <th data-type='string' class="clickable">Transaction ID <span class="hide">&#8595;</span></th>
@@ -31,9 +31,7 @@
     </div>
     <style>
         table {
-            border: 1px solid black;
             border-spacing: 0px;
-            border: 1px solid black;
             margin: 0 auto;
             border-radius: 10px;
         }
@@ -67,12 +65,29 @@
         }
 
         #statistic-orders {
-            margin-top: 15px;
             border: 3px dashed blue;
+            position: fixed;
+            left: 0;
+            top: 0;
         }
 
         .highlight {
             color: green;
+        }
+
+        .search-section th {
+            border-bottom: 5px solid blueviolet;
+        }
+
+        .user-link:hover {
+            font-size: 16px;
+            color: blueviolet;
+            font-weight: bold;
+        }
+
+        .clickable:hover {
+            font-size: 16px;
+            text-shadow: 1px 1px 2px black, 0 0 1em red;
         }
     </style>
     <script src="app.js"></script>

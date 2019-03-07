@@ -175,7 +175,6 @@ export default (function () {
             });
         }
 
-
         ordersCount() {
             return this.rowsArray.length;
         }
@@ -287,14 +286,7 @@ export default (function () {
     var rowsArray = [].slice.call($tablebody.rows);
 
     function searchOrders() {
-        // function highlight(str, start, end) {
-        //     str = str.substr(0, start) +
-        //         '<span class="highlight">' +
-        //         str.substr(start, end - start + 1) +
-        //         '</span>' +
-        //         str.substr(end + 1);
-        //     return str;
-        // }
+
         var newOrdersArray = [], isRecordExist = false;
         for (var i = 0; i < rowsArray.length; i++) {
             for (var j = 0; j < rowsArray[i].cells.length; j++) {
@@ -302,8 +294,6 @@ export default (function () {
                     if (j === 2 || j === 4) continue;
                     newOrdersArray.push(rowsArray[i]);
                     isRecordExist = true;
-                    // var pointedVal = rowsArray[i].cells[j].innerText;
-                    // rowsArray[i].cells[j].innerHTML = highlight(pointedVal, pointedVal.indexOf(this.value), pointedVal.indexOf(this.value) + this.value.length);
                 }
             }
         }
