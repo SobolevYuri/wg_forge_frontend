@@ -213,7 +213,7 @@ export default (function () {
 
         avgCheckMl() {
             var arrMl = this.rowsArray.filter(function (row) {
-                if (row.cells[1].innerText.slice(0, 2) == 'Ms') {
+                if (row.cells[1].innerText.slice(0, 2) == 'Mr') {
                     return true;
                 }
             });
@@ -224,6 +224,7 @@ export default (function () {
             return (currentSum / arrMl.length).toFixed(2);
         }
     }
+
     function task_5(emptyDataSet) {
         if (emptyDataSet) {
             document.querySelector('#statistic-orders').innerHTML = `<tr>
@@ -298,6 +299,7 @@ export default (function () {
         for (var i = 0; i < rowsArray.length; i++) {
             for (var j = 0; j < rowsArray[i].cells.length; j++) {
                 if (rowsArray[i].cells[j].innerText.includes(this.value)) {
+                    if (j === 2 || j === 4) continue;
                     newOrdersArray.push(rowsArray[i]);
                     isRecordExist = true;
                     // var pointedVal = rowsArray[i].cells[j].innerText;
